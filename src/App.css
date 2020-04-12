@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+.dropZone-size{
+    position: relative;
+    width: auto;
+    height: auto;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: dashed;
+    border-radius: 5px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+    position: relative;
+    margin-top: 30px !important;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    color: rgb(192, 191, 191);
+    background-color:rgba(0, 0, 0, 0.603);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subTitle{
+    position: relative;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: rgba(18, 79, 129, 0.945);
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.segment-color{
+    background-color: rgba(175, 175, 175, 0.849) !important;
 }
-
-.App-link {
-  color: #61dafb;
+body{
+    background: url("./parisCartier.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filesName{
+    font-size: small;
 }
