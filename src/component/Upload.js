@@ -7,7 +7,7 @@ class Upload extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            informationList: [], 
+            informationList: [],
             fileName:[]
         }
     }
@@ -32,7 +32,7 @@ class Upload extends Component {
         };
         reader.readAsBinaryString(file);
     }
-    
+
     render() {
         const {informationList, fileName} = this.state
         console.log("file", fileName)
@@ -41,7 +41,7 @@ class Upload extends Component {
             <h1 className="title"> Informations de l’espace publique </h1>
             <h2 className="subTitle">Ville de Paris </h2>
             <Grid textAlign='center' style={{ height: '60vh' }} verticalAlign='middle'>
-                <Grid.Column style={{ maxWidth: 450 }}>
+                <Grid.Column style={{ maxWidth: 700 }}>
                     <Segment className="segment-color" placeholder>
                         <Grid columns={2} stackable textAlign='center'>
                         <Divider vertical></Divider>
@@ -49,10 +49,10 @@ class Upload extends Component {
                             <Grid.Column>
                             <Header> Upload CSV file </Header>
                             <div className="dropzone">
-                                <Dropzone className="dropZone-size" accept=".csv" onDropAccepted={this.onDrop.bind(this)}> 
-                                    <Icon name='upload' />   
+                                <Dropzone className="dropZone-size" accept=".csv" onDropAccepted={this.onDrop.bind(this)}>
+                                    <Icon name='upload' />
                                 </Dropzone>
-                            </div>            
+                            </div>
                             </Grid.Column>
                             <Grid.Column>
                             <Header>
