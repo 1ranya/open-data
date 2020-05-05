@@ -62,7 +62,7 @@ class Upload extends Component {
         return (
           <div>
             <h2 className="subTitle">
-            Ville de Paris<img src={logo} style={{ width:70, height:60, paddingTop: 26}}></img>
+            Ville de Paris<img src={logo} style={{ width:70, height:75, paddingTop: 26}}></img>
             <br/>
             <span style={{ fontSize:20, textAlign: "center"}}>Informations de l’espace publique</span>
             </h2>
@@ -103,4 +103,4 @@ class Upload extends Component {
     }
 }
 
-export default Upload
+export default Upload;

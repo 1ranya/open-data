@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3001;
 
-const merchant_model = require('./merchant_model');
+const dataupload_model = require('./dataupload_model');
 const data = []
 app.use(express.json())
 
@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/csv-data', (req, res)=>{
-  merchant_model.fetchCsvFile()
+  dataupload_model.fetchCsvFile()
   .then(response =>{
     res.status(200).send(response);
   })
@@ -24,7 +24,7 @@ app.get('/csv-data', (req, res)=>{
 })
 
 app.post('/merchants', (req, res) => {
-  merchant_model.insertCsvData(req.body)
+  dataupload_model.insertCsvData(req.body)
   .then(response => {
     res.status(200).send(response);
   })
@@ -36,3 +36,5 @@ app.post('/merchants', (req, res) => {
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })
+
+module.exports = app.listen(3000);
