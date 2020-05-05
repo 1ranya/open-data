@@ -21,13 +21,16 @@
     "react-dropzone": "^4.2.13",
     "react-scripts": "3.4.1",
     "semantic-ui-react": "^0.88.2",
+    "serve": "^11.3.0",
     "supertest": "^4.0.2"
   },
   "scripts": {
-    "start": "node index.js & react-scripts start ",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
