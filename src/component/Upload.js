@@ -30,7 +30,7 @@ class Upload extends Component {
               console.log("data",element[2])
               let information = element[1]
               let value = element[2]
-              fetch(`https://opendata-project.herokuapp.com/merchants`, {
+              fetch(`http://localhost:${port}/merchants`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
