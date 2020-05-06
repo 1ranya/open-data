@@ -3,6 +3,7 @@ import { Button,Divider,Grid,Header,Icon,Search,Segment} from 'semantic-ui-react
 import csv from 'csv';
 import Dropzone from 'react-dropzone';
 import logo from '../DataExportLogo.png';
+const port = process.env.PORT || 3001;
 
 class Upload extends Component {
 
@@ -29,7 +30,7 @@ class Upload extends Component {
               console.log("data",element[2])
               let information = element[1]
               let value = element[2]
-              fetch('http://localhost:3001/merchants', {
+              fetch(`https://opendata-project.herokuapp.com/merchants`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
