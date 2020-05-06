@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 const dataupload_model = require('./dataupload_model');
 const data = []
@@ -33,8 +33,8 @@ app.post('/merchants', (req, res) => {
   })
 })
 
-app.listen((process.env.PORT || port), () => {
+app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })
 
-module.exports = app.listen(3000);
+module.exports = app.listen(process.env.PORT);

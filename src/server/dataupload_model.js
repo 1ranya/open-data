@@ -3,11 +3,19 @@ const fastcsv = require("fast-csv");
 const Pool = require('pg').Pool
 const ws = fs.createWriteStream("information_espace_publique_Paris.csv");
 
+// const pool = new Pool({
+//   user: 'postgres',
+//   host: 'localhost',
+//   database: 'OpenData',
+//   password: '19951995',
+//   port: 5432,
+// });
+
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'OpenData',
-  password: '19951995',
+  user: 'gcqaffquozzgoy',
+  host: 'ec2-3-213-192-58.compute-1.amazonaws.com',
+  database: 'd1ai667uhr7nu5',
+  password: '01fe4798b972061df1a824d8172cd275d09dfdaeb79e24685347262fa832e444',
   port: 5432,
 });
 
@@ -23,7 +31,7 @@ const fetchCsvFile = () =>{
       fastcsv
       .write(jsonData, { headers: true })
       .on("finish", function() {
-        console.log("Write to bezkoder_postgresql_fastcsv.csv successfully!");
+        console.log("Write to information_espace_publique_Paris.csv successfully!");
       })
       .pipe(ws);
     })
